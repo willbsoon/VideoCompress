@@ -92,7 +92,11 @@ extension Compress on IVideoCompress {
       }
     }
 
-    return File(decodedThumbnailPath);
+    if (decodedThumbnailPath != null) {
+      return File(decodedThumbnailPath!);
+    } else {
+      return File(filePath);
+    }
   }
 
   /// get media information from [path]
