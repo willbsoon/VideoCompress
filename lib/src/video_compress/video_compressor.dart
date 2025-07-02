@@ -95,7 +95,7 @@ extension Compress on IVideoCompress {
     if (decodedThumbnailPath != null) {
       return File(decodedThumbnailPath!);
     } else {
-      return File(filePath);
+      return File(filePath!);
     }
   }
 
